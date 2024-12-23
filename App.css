@@ -1,0 +1,24 @@
+.highlight-zero {
+    background-color: red;
+    color: white;
+}
+
+
+.x-grid-cell-inner a {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.toolbar-button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: white;
+    color: #007bff;
+}
+
+.toolbar-button:hover {
+    font-weight: bold;
+
+}
