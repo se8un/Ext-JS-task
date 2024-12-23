@@ -94,3 +94,25 @@ This repository contains a test task implemented using ExtJS 6. The task involve
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
+
+## Examples:
+![1](https://github.com/user-attachments/assets/e56f63a0-4e30-4933-899a-ce92df355755)
+
+![2](https://github.com/user-attachments/assets/484ad414-991e-4a2b-a8dd-f1f8f8b25ee2)
+
+![3](https://github.com/user-attachments/assets/73f81595-2902-4839-bc46-c16fda586e89)
+
+![4](https://github.com/user-attachments/assets/9ac2e5a4-ad83-4926-8de8-10db070128c7)
+
+![5](https://github.com/user-attachments/assets/2f8ff5fa-d428-4b15-b25e-86499167a752)
+
+
+
+
+
+
+
+
+
+
+
