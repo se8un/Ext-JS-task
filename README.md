@@ -1,36 +1,96 @@
-# Тестовое задание
-### Нужно использовать ExtJS 6. Вы должны изучить в ходе тестового задания данный фреймворк.
+# ExtJS Test Task
 
+This repository contains a test task implemented using ExtJS 6. The task involves creating a web application with user authentication, a main window with tabbed interfaces, and CRUD functionality for managing products.
 
---
-1. Вход
-1.1. При открытии web-приложения в браузере  отображаем форму входа с полями «Логин», «Пароль» и кнопкой «Вход».
-При нажатии на кнопку проверяем правильность пары логин пароль (правильной считается логин 'admin', пароль 'padmin'). При несовпадении информируем пользователя соответствующим сообщением.  Если введены правильные данные открываем главное окно.
+## Features
 
---
-2. Главное окно 
-2.1. На главном окне должна быть кнопка «Товары», кнопка «Выход» и панель с вкладками ( где и будут открываться списки товаров ).       
-2.2. При нажатии на кнопку «Выход», необходимо вернуться на страницу входа. Поля «Логин» и «Пароль» необходимо очистить.
-2.3. При каждом нажатии на кнопку «Товары» - открываем новую вкладку для работы со списком товаров.
+### 1. Login Page
+- Displays a login form with fields for **"Username"** and **"Password"**, and a **"Login"** button.
+- On clicking the "Login" button:
+  - Validate the credentials: The correct credentials are `admin` for username and `padmin` for password.
+  - Display an error message for incorrect credentials.
+  - On successful login, navigate to the **Main Window**.
 
---
-3. Вкладка «Товары»
-3.1.  На вкладке с товарами должны быть 2 фильтра :
-·        По идентификатору товара. Точное совпадение.
-·        По описанию товара (вхождение строки поиска в наименование товара).
-Фильтры должны отрабатывать по нажатию кнопки «Enter»
-3.2. Ниже должна располагаться таблица со списком товаров со следующими колонками :
-·        ID — целочисленное
-·        Имя — текстовое
-·        Описание — текстовое
-·        Цена — число с плавающей точкой
-·        Кол-во — целочисленное
-Данные для таблицы описать в объекте Store.
-Если количество товаров равно 0, подсвечивать ячейку с кол-во красным цветом.
+### 2. Main Window
+- Contains:
+  - A **"Products"** button.
+  - A **"Logout"** button.
+  - A tab panel where product lists open.
+- **Features:**
+  - Clicking the **"Logout"** button returns the user to the login page and clears the login form.
+  - Clicking the **"Products"** button opens a new tab to manage the product list. Multiple tabs can be opened.
 
---
-4. Карточка товаров.
-4.1. При нажатии на ячейку «Имя» открывается карточка товара.
-4.2. В карточку товара загружаем данные из выбранной строки. Поля «Цена» и «Кол-во» редактируются, предусмотреть проверку ввода (для цены — неотрицательные числа с плавающей точкой, для количества неотрицательные целые).
-4.3. По кнопке «Отмена» закрываем карточку товара.
-4.4. По кнопке «Сохранить», если есть измененные данные, необходимо вывести сообщение ( о наличии измененных данных), после сохранить данные.
+### 3. Product Tab
+- Contains:
+  - **Filters**:
+    - Filter by **Product ID** (exact match).
+    - Filter by **Product Description** (partial match).
+    - Filters apply when the user presses the "Enter" key.
+  - **Table of Products:**
+    - Columns:
+      - **ID** (integer)
+      - **Name** (text)
+      - **Description** (text)
+      - **Price** (float)
+      - **Quantity** (integer)
+    - Data source: ExtJS `Store`.
+    - Cells in the **Quantity** column are highlighted in red when the quantity is `0`.
+
+### 4. Product Details
+- Opens when clicking on a **Name** cell in the product table.
+- Displays:
+  - Fields pre-filled with data from the selected row.
+  - Editable fields for **Price** and **Quantity**.
+    - Validation:
+      - **Price:** Non-negative floating-point numbers.
+      - **Quantity:** Non-negative integers.
+- Buttons:
+  - **"Cancel"**: Closes the product details window.
+  - **"Save"**:
+    - If changes are made, displays a message indicating the presence of unsaved changes.
+    - Saves the updated data to the `Store`.
+
+## Requirements
+- [ExtJS 6](https://www.sencha.com/products/extjs/)
+- [Sencha Cmd](https://www.sencha.com/products/sencha-cmd/) (to generate and build the application)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/extjs-test-task.git
+   cd extjs-test-task
+   ```
+
+2. Ensure you have ExtJS 6 SDK and Sencha Cmd installed.
+
+3. Generate the application structure:
+   ```bash
+   sencha -sdk /path/to/extjs-sdk generate app MyApp ./
+   ```
+
+4. Start the development server:
+   ```bash
+   sencha app watch
+   ```
+
+5. Open the application in your browser:
+   ```
+   http://localhost:1841
+   ```
+
+## Usage
+- Log in using the credentials `admin` / `padmin`.
+- Use the **"Products"** button to open tabs for managing product lists.
+- Filter, view, and edit product data as needed.
+- Use the **"Logout"** button to return to the login screen.
+
+## Folder Structure
+- **`app/`**: Contains the application's source code, including controllers, models, views, and stores.
+- **`build/`**: Contains the built application (production-ready files).
+- **`resources/`**: Contains styles, themes, and assets.
+- **`index.html`**: The main entry point for the application.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
