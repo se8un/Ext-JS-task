@@ -1,5 +1,7 @@
 # ExtJS Test Task
 
+В этом репозитории содержится тестовое задание, реализованное с использованием ExtJS 6. Задание включает создание веб-приложения с аутентификацией пользователя, главным окном с интерфейсами с вкладками и функциональностью CRUD для управления продуктами.
+
 This repository contains a test task implemented using ExtJS 6. The task involves creating a web application with user authentication, a main window with tabbed interfaces, and CRUD functionality for managing products.
 
 ## Features
